@@ -44,10 +44,10 @@
     </div>
 
     <script>
-        const X_PIXELS=23
-        const Y_PIXELS=23
-        const X_OFFSET=0
-        const Y_OFFSET=0
+        const X_PIXELS=8
+        const Y_PIXELS=8
+        const X_OFFSET=100
+        const Y_OFFSET=400
 
         const X_IN_PLACE=1719
         const Y_IN_PLACE=1612
@@ -98,7 +98,7 @@
         function drawText(text, x, y){
             fg.font = '80px Sans-serif';
             fg.strokeStyle = 'black';
-            fg.lineWidth = 8;
+            fg.lineWidth = 1;
             fg.strokeText(text, x, y);
             fg.fillStyle = 'white';
             fg.fillText(text, x, y);
