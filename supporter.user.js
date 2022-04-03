@@ -11,8 +11,8 @@
 // @downloadURL  https://Simsz.github.io/supporter.user.js
 // ==/UserScript==
 
-const X_OFFSET = 773
-const Y_OFFSET = 735
+const X_OFFSET = 1719
+const Y_OFFSET = 1612
 
 async function run() {
     let run = false
