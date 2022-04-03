@@ -149,7 +149,7 @@ async function run() {
                 resolve({template_ctx: template_ctx, template_img: img})
             }
             img.onerror = reject
-            img.src = "https://rplacesuperstonk.github.io/rplace-image/reference.png?tstamp=" + Math.floor(Date.now() / 10000);
+            img.src = "https://Simsz.github.io/reference.png?tstamp=" + Math.floor(Date.now() / 10000);
         })
     }
 
