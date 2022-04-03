@@ -1,14 +1,14 @@
 // ==UserScript==
-// @name         SuperStonk rplace autoclicker
+// @name         Tarik rplace autoclicker
 // @namespace    http://tampermonkey.net/
 // @version      0.1
 // @description  support clicking
-// @author       halfdane
+// @author       kotri
 // @match        https://hot-potato.reddit.com/embed*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=reddit.com
 // @grant        none
-// @updateURL    https://halfdane.github.io/rplace/supporter.user.js
-// @downloadURL  https://halfdane.github.io/rplace/supporter.user.js
+// @updateURL    https://Simsz.github.io/supporter.user.js
+// @downloadURL  https://Simsz.github.io/supporter.user.js
 // ==/UserScript==
 
 const X_OFFSET = 773
