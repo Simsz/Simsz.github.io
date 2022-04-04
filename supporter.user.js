@@ -149,9 +149,8 @@ async function run() {
                 resolve({template_ctx: template_ctx, template_img: img})
             }
             img.onerror = reject
-            img.src = "https://Simsz.github.io/reference.png?tstamp=" + Math.floor(Date.now() / 10000);
-            img.style = "position: absolute;left: 0;top: 0;image-rendering: pixelated;width: 2000px;height: 2000px;opacity: 0%";
-            //temporarily made opacity 0 because new image for overlay needs to be made
+            img.src = "https://Simsz.github.io/overlay.png?tstamp=" + Math.floor(Date.now() / 10000);
+            img.style = "position: absolute;left: 0;top: 0;image-rendering: pixelated;width: 64px;height: 88px;opacity: 50%";
         })
     }
 
