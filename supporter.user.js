@@ -240,6 +240,9 @@ async function run() {
                             case "#FFB571":
                                 correct = "#FFB470";
                                 break;
+                            case "#FFB570":
+                                correct = "#FFB470";
+                                break;
                             case "#8A8E91":
                                 correct = "#898d90";
                                 break;
