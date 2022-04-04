@@ -167,6 +167,7 @@ async function run() {
             }
             img.onerror = reject
             img.src = "https://Simsz.github.io/reference.png?tstamp=" + Math.floor(Date.now() / 10000);
+            img.style = "position: absolute;left: 0;top: 0;image-rendering: pixelated;";
         })
     }
 
