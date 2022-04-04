@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Tarik rplace autoclicker
+// @name         Tarik rplace overlay
 // @namespace    http://tampermonkey.net/
 // @version      0.2
-// @description  support clicking
+// @description  support overlay + clicking if enabled
 // @author       kotri
 // @match        https://hot-potato.reddit.com/embed*
 // @icon         https://www.google.com/s2/favicons?sz=64&domain=reddit.com
