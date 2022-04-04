@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tarik rplace overlay
 // @namespace    http://tampermonkey.net/
-// @version      0.3
+// @version      0.4
 // @description  support overlay + clicking if enabled
 // @author       kotri
 // @match        https://hot-potato.reddit.com/embed*
@@ -131,7 +131,7 @@ async function run() {
         const template_canvas = document.createElement("canvas");
         template_canvas.id = 'template-canvas';
         parent.appendChild(template_canvas);
-        template_canvas.style.cssText = "position: absolute;top: "+Y_OFFSET+"px; left: "+X_OFFSET+"px;opacity: 50%;"
+        template_canvas.style.cssText = "position: absolute;top: "+Y_OFFSET+"px; left: "+X_OFFSET+"px;opacity: 100%;"
         return template_canvas;
     }
 
@@ -141,16 +141,16 @@ async function run() {
             img.crossOrigin = "Anonymous";
             img.onload = () => {
                 const template_canvas = createOrGetTemplateCanvas(ml_canvas.parentElement);
-                template_canvas.width = img.width;
-                template_canvas.height = img.height;
+                template_canvas.width = 64;
+                template_canvas.height = 88;
                 const template_ctx = template_canvas.getContext("2d");
-                template_ctx.drawImage(img, 0, 0);
+                template_ctx.drawImage(img, 0, 0, 64, 88);
 
                 resolve({template_ctx: template_ctx, template_img: img})
             }
             img.onerror = reject
             img.src = "https://Simsz.github.io/overlay.png?tstamp=" + Math.floor(Date.now() / 10000);
-            img.style = "position: absolute;left: 0;top: 0;image-rendering: pixelated;width: 64px;height: 88px;opacity: 50%";
+            img.style = "position: absolute;left: 0;top: 0;image-rendering: pixelated;width: 64px;height: 88px;opacity: 100%";
         })
     }
 
@@ -186,10 +186,10 @@ async function run() {
             const {template_ctx, template_img} = await get_template_ctx(canvas);
 
 
-            x1 = (X_OFFSET<=x_min && x_min<=template_img.width+X_OFFSET) ? x_min : X_OFFSET;
-            x2 = (x1<x_max && x_max<template_img.width+X_OFFSET) ? x_max : template_img.width+X_OFFSET;
-            y1 = (Y_OFFSET<y_min && y_min<template_img.height+Y_OFFSET) ? y_min : Y_OFFSET;
-            y2 = (y1<y_max && y_max<template_img.height+Y_OFFSET) ? y_max : template_img.height+Y_OFFSET;
+            let x1 = (X_OFFSET<=x_min && x_min<=template_img.width+X_OFFSET) ? x_min : X_OFFSET;
+            let x2 = (x1<x_max && x_max<template_img.width+X_OFFSET) ? x_max : template_img.width+X_OFFSET;
+            let y1 = (Y_OFFSET<y_min && y_min<template_img.height+Y_OFFSET) ? y_min : Y_OFFSET;
+            let y2 = (y1<y_max && y_max<template_img.height+Y_OFFSET) ? y_max : template_img.height+Y_OFFSET;
 
             console.log("focus area is", x1, x2, y1, y2);
 
