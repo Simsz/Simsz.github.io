@@ -204,9 +204,9 @@ async function run() {
 
 
             x_min = (X_OFFSET<=x_min && x_min<=template_img.width+X_OFFSET) ? x_min : X_OFFSET;
-            x_max = (x_min<=x_max && x_max<=template_img.width+X_OFFSET) ? x_max : template_img.width+X_OFFSET;
+            x_max = (x_min<=x_max && x_max<=template_img.width+X_OFFSET) ? x_max : template_img.width+X_OFFSET-1;
             y_min = (Y_OFFSET<=y_min && y_min<=template_img.height+Y_OFFSET) ? y_min : Y_OFFSET;
-            y_max = (y_min<=y_max && y_max<=template_img.height+Y_OFFSET) ? y_max : template_img.height+Y_OFFSET;
+            y_max = (y_min<=y_max && y_max<=template_img.height+Y_OFFSET) ? y_max : template_img.height+Y_OFFSET-1;
 
             mlEmbed().querySelector("#x_min").value = x_min;
             mlEmbed().querySelector("#y_min").value = y_min;
@@ -245,7 +245,7 @@ async function run() {
                                 break;
                             case "#1F4FA5":
                                 correct = "#2450A4";
-                                break;  
+                                break;
                             case "#D5D8DA":
                                 correct = "#D4D7D9";
                         }
