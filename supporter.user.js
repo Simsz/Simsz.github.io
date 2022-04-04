@@ -86,7 +86,7 @@ async function run() {
         const ml = mlEmbed();
 
         var template = Handlebars.compile(`
-<div style="position: absolute; top: 20%; left: 0; background-color: green; padding: 20px; border: thick double rgb(50, 161, 206); border-radius: 10px;">
+<div style="position: absolute; top: 2.5%; left: 0; background-color: green; padding: 20px; border: thick double rgb(50, 161, 206); border-radius: 10px;">
     <h1>Tarik's r/place supporter</h1>
     <p>Forked from halfdane</p>
     <form id="control-panel">
