@@ -141,8 +141,8 @@ async function run() {
             img.crossOrigin = "Anonymous";
             img.onload = () => {
                 const template_canvas = createOrGetTemplateCanvas(ml_canvas.parentElement);
-                template_canvas.width = 64;
-                template_canvas.height = 88;
+                template_canvas.width = 128;
+                template_canvas.height = 176;
                 const template_ctx = template_canvas.getContext("2d");
                 template_ctx.drawImage(img, 0, 0, 64, 88);
 
