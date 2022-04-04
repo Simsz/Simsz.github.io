@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tarik rplace overlay
 // @namespace    http://tampermonkey.net/
-// @version      0.2
+// @version      0.3
 // @description  support overlay + clicking if enabled
 // @author       kotri
 // @match        https://hot-potato.reddit.com/embed*
