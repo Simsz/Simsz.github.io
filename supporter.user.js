@@ -9,6 +9,7 @@
 // @grant        none
 // @updateURL    https://Simsz.github.io/supporter.user.js
 // @downloadURL  https://Simsz.github.io/supporter.user.js
+// @require      https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js
 // ==/UserScript==
 
 const X_OFFSET = 1719
