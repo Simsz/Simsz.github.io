@@ -86,7 +86,7 @@ async function run() {
         const ml = mlEmbed();
 
         var template = Handlebars.compile(`
-<div style="position: absolute; top: 40%; left: 0; background-color: green; padding: 20px; border: thick double rgb(50, 161, 206); border-radius: 10px;">
+<div style="position: absolute; top: 20%; left: 0; background-color: green; padding: 20px; border: thick double rgb(50, 161, 206); border-radius: 10px;">
     <h1>Tarik's r/place supporter</h1>
     <p>Forked from halfdane</p>
     <form id="control-panel">
@@ -221,6 +221,34 @@ async function run() {
                     for (let y = y_min; y <= y_max; y++) {
                         let correct = getPixel(template_ctx, x - X_OFFSET, y-Y_OFFSET);
                         let actual = getPixel(ctx, x, y);
+                        switch (correct) {
+                            case "#FF4300":
+                                correct = "#FF4500";
+                                break;
+                            case "#95B4FF":
+                                correct = "#94B3FF";
+                                break;
+                            case "#FFF8B9":
+                                correct = "#FFF8B8";
+                                break;
+                            case "#3391EB":
+                                correct = "#3690EA";
+                                break;
+                            case "#50EAF4":
+                                correct = "#51E9F4";
+                                break;
+                            case "#FFB571":
+                                correct = "#FFB470";
+                                break;
+                            case "#8A8E91":
+                                correct = "#898d90";
+                                break;
+                            case "#1F4FA5":
+                                correct = "#2450A4";
+                                break;  
+                            case "#D5D8DA":
+                                correct = "#D4D7D9";
+                        }
                         if (actual !== correct) {
                             errors.push({x: x, y: y, correct: correct, actual: actual});
                         }
