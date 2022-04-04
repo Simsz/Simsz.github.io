@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         Tarik rplace autoclicker
 // @namespace    http://tampermonkey.net/
-// @version      0.1
+// @version      0.2
 // @description  support clicking
 // @author       kotri
 // @match        https://hot-potato.reddit.com/embed*
@@ -185,10 +185,10 @@ async function run() {
             const {template_ctx, template_img} = await get_template_ctx(canvas);
 
 
-            let x1 = (X_OFFSET<=x_min && x_min<=template_img.width+X_OFFSET) ? x_min : X_OFFSET;
-            let x2 = (x1<x_max && x_max<template_img.width+X_OFFSET) ? x_max : template_img.width+X_OFFSET;
-            let y1 = (Y_OFFSET<y_min && y_min<template_img.height+Y_OFFSET) ? y_min : Y_OFFSET;
-            let y2 = (y1<y_max && y_max<template_img.height+Y_OFFSET) ? y_max : template_img.height+Y_OFFSET;
+            x1 = (X_OFFSET<=x_min && x_min<=template_img.width+X_OFFSET) ? x_min : X_OFFSET;
+            x2 = (x1<x_max && x_max<template_img.width+X_OFFSET) ? x_max : template_img.width+X_OFFSET;
+            y1 = (Y_OFFSET<y_min && y_min<template_img.height+Y_OFFSET) ? y_min : Y_OFFSET;
+            y2 = (y1<y_max && y_max<template_img.height+Y_OFFSET) ? y_max : template_img.height+Y_OFFSET;
 
             console.log("focus area is", x1, x2, y1, y2);
 
