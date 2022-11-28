@@ -1,4 +1,5 @@
 # El Gato Key Light Air - Google Assistant integration
+*All original code was taken from: https://github.com/sirdarckcat/sirdarckcat.github.io/tree/master/fakeauth*
 
 This allows you to control the El Gato Key Light Air through Google Home. It supports brightness and temperature.
 
@@ -8,8 +9,8 @@ You should be able to replicate this by:
   3. Deploy the cloud function.
   4. Create a Smart Home action at https://console.actions.google.com/
   5. In fullfilment URL put your cloud function.
-  6. In the testing URL for Chrome put https://sirdarckcat.github.io/fakeauth/index.html
-  7. In the testing URL for Node put https://sirdarckcat.github.io/fakeauth/bundle.js
+  6. In the testing URL for Chrome put https://Simsz.github.io/fakeauth/index.html
+  7. In the testing URL for Node put https://Simsz.github.io/fakeauth/bundle.js
   8. In device configuration add 3 scan configs:
 
     * Scan Config:
@@ -28,4 +29,4 @@ You should be able to replicate this by:
   12. Type your cloud function on the Token URL
 
 
-**It has only been tested with one light.**
+**Currently only tested and used with Elgato Key Light Air (v216 1.0.3)**
